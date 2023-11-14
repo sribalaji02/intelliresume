@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resume</title>
+  <meta name="keywords" content="professional resume template, resume template">
+  <meta name="description" content="A professional resume template in HTML and CSS">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(45deg, #ecf0f3, #f7f8fa);
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+    }
+
+    .header {
+      text-align: center;
+      background: linear-gradient(45deg, #3498db, #2ecc71);
+      color: #fff;
+      padding: 20px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+
+    .header h1 {
+      font-size: 28px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .contact-info {
+      font-size: 16px;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .contact-info p {
+      margin: 0;
+    }
+
+    .contact-info a {
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+    }
+
+    .contact-info a#linkedin, .contact-info a#email, .contact-info a#github {
+      color: #fff; /* Set the color of LinkedIn, email, and GitHub links to white */
+    }
+
+    .section {
+      margin-top: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+
+    .section h2 {
+      font-size: 24px;
+      margin-top: 0;
+      color: #3498db;
+    }
+
+    .section p {
+      font-size: 16px;
+    }
+
+    .section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .section ul li {
+      margin: 5px 0;
+    }
+
+    .section h3 {
+      font-size: 20px;
+      margin: 0;
+    }
+
+    .section h4 {
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .section h5 {
+      font-size: 16px;
+      color: #777;
+      margin: 0;
+    }
+
+    .skills,
+    .education,
+    .projects {
+      columns: 2;
+      -webkit-columns: 2;
+      -moz-columns: 2;
+    }
+
+    .certifications {
+      margin-top: 20px;
+    }
+
+    .profile-icon {
+      font-size: 20px;
+      margin-right: 10px;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .container {
+        box-shadow: none;
+        border: none;
+      }
+
+      .header {
+        background: transparent;
+        color: #000;
+      }
+
+      .contact-info a {
+        color: #000;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <header class="header">
+    <h1 id="name">{{name}}</h1>
+    <div class="contact-info">
+      <p>
+        <span id="phone" class="ats-hidden"><h0 class="profile-icon">☎</h0>{{phone}}</span>
+        <span id="location" class="ats-hidden"><h0 class="profile-icon">📍</h0>{{location}}</span>
+      </p>
+      <p>
+        <a href="mailto:{{email}}" id="email"><h0 target="_blank" class="profile-icon"></h0>Email</a>
+        <a href="{{linkedin}}" id="linkedin" target="_blank"><h0 class="profile-icon">LinkedIn</h0></a>
+        <a href="{{github}}" id="github" target="_blank"><h0 class="profile-icon">GitHub</h0></a>
+      </p>
+    </div>
+  </header>
+  <section class="section">
+    <h2>Professional Summary</h2>
+    <p id="summary">{{summary}}</p>
+  </section>
+  <section class="section">
+    <h2>Work History</h2>
+    <ul id="work-history"  oninput="autoExpand(this)">
+      <li>
+        <p>{{work}}</p>
+        </ul>
+      </li>
+      <!-- More work history items go here -->
+    </ul>
+  </section>
+  <section class="section">
+    <h2>Skills</h2>
+    <ul class="skills" id="skills"  oninput="autoExpand(this)">
+      <p>{{skills}}</p>
+    </ul>
+  </section>
+  <section class="section">
+    <h2>Education</h2>
+    <ul class="education" id="education"  oninput="autoExpand(this)">
+      <li>
+        <h3 id="degree">Degree Title</h3>
+        <h4 id="institution">Institution Name</h4>
+        <h5 id="education-location">Location</h5>
+      </li>
+      <!-- More education items go here -->
+    </ul>
+  </section>
+  <section class="section">
+    <h2>Projects</h2>
+        <p id="project-description">{{proj}}</p>
+      <!-- Add more project items as needed -->
+    </ul>
+  </section>
+  <section class="section">
+    <h2>Certifications</h2>
+    <ul class="certifications" id="certifications"  oninput="autoExpand(this)">
+      <p>{{cert}}</p>
+    </ul>
+  </section>
+</div>
+<script>
+  // JavaScript to handle dynamic resizing
+  function autoExpand(element) {
+    element.style.height = 'auto';
+    element.style.height = element.scrollHeight + 'px';
+  }
+</script>
+</body>
+</html>
