@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-+fua8tl2bili(05jxyw-%ex&(iaf^52=05_evcn4l9n!*eypyw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'intelliresume.onrender.com']
 
 # Application definition
 
