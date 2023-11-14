@@ -21,3 +21,4 @@ requests==2.31.0
 whitenoise==6.5.0
 tinydb==4.8.0
 firebase-admin==6.2.0
+gunicorn==19.7.1
