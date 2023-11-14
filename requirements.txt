@@ -2,6 +2,7 @@ bardapi==0.1.38
 Django==3.2.23
 django-allauth==0.58.1
 google-ai-generativelanguage==0.3.3
+google-generativeai==0.2.2
 google-api-core==2.12.0
 google-api-python-client==2.106.0
 google-auth==2.23.4
